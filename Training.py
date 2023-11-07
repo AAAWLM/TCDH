@@ -26,8 +26,8 @@ def train_epoch(model, dataloader, optimizer, criterion1, criterion2, device,alp
     for i, data in enumerate(dataloader):
         samples, targets = data[0].to(device), data[1].to(device)
         decoder, embeddings,_, hash = model(samples)
-        loss_R = criterion1(decoder, samples)
-        loss_T = criterion2(hash, targets)+criterion2(embeddings, targets)
+        loss_R = criterion1(decoder, samples) # Reconstruction loss
+        loss_T = criterion2(hash, targets)+criterion2(embeddings, targets) # Triplet loss
         loss = alpha * loss_R+loss_T
         # Backward pass
         optimizer.zero_grad()
