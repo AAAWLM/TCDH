@@ -1,5 +1,5 @@
 """
-    ttps://gitlab.kitware.com/brianhhu/x-mir/-/blob/master/read_data.py?ref_type=heads
+    https://gitlab.kitware.com/brianhhu/x-mir/-/blob/master/read_data.py?ref_type=heads
 """
 
 import os
