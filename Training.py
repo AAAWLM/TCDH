@@ -133,8 +133,8 @@ def main(args):
     # targets is a list where the i_th element corresponds to the label of i_th dataset element.
     # This is required for PKSampler to randomly sample from exactly p classes.
 
-    train_dataset = ChestXrayDataSet(data_dir=os.path.join(args.dataset_dir, 'test'),
-                                     image_list_file=args.test_image_list)
+    train_dataset = ChestXrayDataSet(data_dir=os.path.join(args.dataset_dir, 'train'),
+                                     image_list_file=args.train_image_list)
     targets = train_dataset.labels
     train_loader = DataLoader(train_dataset, batch_size=batch_size,
                               sampler=PKSampler(targets, p, k),
