@@ -193,5 +193,5 @@ class TCDHmodule(nn.Module):
         de5 = self.deconv4(u4)
         decoder = self.sigmoid(de5)
 
-        return decoder, embeddings, hash_code,  hash_like
+        return decoder, embeddings, hash_code, hash_like
 
