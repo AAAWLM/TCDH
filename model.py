@@ -147,7 +147,6 @@ class TCDHmodule(nn.Module):
         self.u2 = double_conv2d_bn(256, 128)
         self.u3 = double_conv2d_bn(128, 64)
         self.u4 = double_conv2d_bn(128, 64)
-        self.u1 = double_conv2d_bn(512, 256)
 
         self.deconv0 = deconv2d_bn(512, 256)
         self.deconv1 = deconv2d_bn(256, 128)
