@@ -175,24 +175,24 @@ class TCDHmodule(nn.Module):
         hash_code = self.hash_layer(embeddings)
         hash_like = self.sigmoid(hash_code)
 
-        OO = self.deconv0(x8)
-        c1 = torch.cat((OO, x7),dim=1)
+        de1 = self.deconv0(x8)
+        c1 = torch.cat((de1, x7),dim=1)
         u1 = self.u1(c1)
 
-        de1 = self.deconv1(u1)
-        c2 = torch.cat((de1, x6), dim=1)
+        de2 = self.deconv1(u1)
+        c2 = torch.cat((de2, x6), dim=1)
         u2 = self.u2(c2)
 
-        de2 = self.deconv2(u2)
-        c3 = torch.cat((de2, x5), dim=1)
+        de3 = self.deconv2(u2)
+        c3 = torch.cat((de3, x5), dim=1)
         u3 = self.u3(c3)
 
-        de3 = self.deconv3(u3)
-        c4 = torch.cat((de3, x3), dim=1)
+        de4 = self.deconv3(u3)
+        c4 = torch.cat((de4, x3), dim=1)
         u4 = self.u4(c4)
 
-        de4 = self.deconv4(u4)
-        decoder = self.sigmoid(de4)
+        de5 = self.deconv4(u4)
+        decoder = self.sigmoid(de5)
 
         return decoder, embeddings, hash_code,  hash_like
 
