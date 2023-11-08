@@ -182,7 +182,7 @@ def parse_args():
     parser.add_argument('-k', '--samples-per-label', default=16, type=int,
                         help='Number of samples per label in a batch')
     parser.add_argument('--eval-batch-size', default=32,type=int)
-    parser.add_argument('--epochs', default=1, type=int, metavar='N',
+    parser.add_argument('--epochs', default=30, type=int, metavar='N',
                         help='Number of training epochs to run')
     parser.add_argument('--margin', default=0.2, type=float,
                         help='Triplet loss margin')
