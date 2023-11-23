@@ -2,7 +2,7 @@
 The source code of the **T**riplet-**C**onstrained **D**eep **H**ashing (TCDH) framework.
 
 ## Paper
-**Triplet-Constrained Deep Hashing for Chest X-Ray Image Search**
+**Triplet-Constrained Deep Hashing for Chest X-Ray Image Retrieval in COVID-19 Assessment**
 
 Linmin Wang, Qianqian Wang, Xiaochuan Wang, Yunling Ma, Limei Zhang, Mingxia Liu
 
